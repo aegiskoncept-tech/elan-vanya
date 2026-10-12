@@ -1,0 +1,266 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-heading: var(--heading);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-highlight: var(--highlight);
+  --color-draft-bg: var(--draft-bg);
+  --color-draft-fg: var(--draft-fg);
+  --color-danger: var(--danger);
+  --color-ok: var(--ok);
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-manrope), system-ui, -apple-system, sans-serif;
+}
+
+/* ========================================================
+   BASE / FOREST (DEFAULT) PALETTE
+   ======================================================== */
+:root,
+html[data-palette="forest"] {
+  --bg: #F6F3EB;
+  --surface: #FFFFFF;
+  --surface-2: #EFECE3;
+  --line: #DDD8CD;
+  --fg: #222824;
+  --muted: #636C65;
+  --heading: #11231E;
+  --accent: #173D32;
+  --on-accent: #FFFFFF;
+  --highlight: #9C5A2B;
+  --draft-bg: #EFE8DC;
+  --draft-fg: #6B4912;
+  --danger: #B91C1C;
+  --ok: #15803D;
+}
+
+html.dark,
+html.dark[data-palette="forest"] {
+  --bg: #0E1613;
+  --surface: #141F1B;
+  --surface-2: #1B2A25;
+  --line: #273A33;
+  --fg: #E2E8E4;
+  --muted: #95A59B;
+  --heading: #F1F5F2;
+  --accent: #C7D6C1;
+  --on-accent: #0E1613;
+  --highlight: #D9925C;
+  --draft-bg: #2C2418;
+  --draft-fg: #D4A853;
+  --danger: #F87171;
+  --ok: #4ADE80;
+}
+
+/* ========================================================
+   OCHRE (DESERT OCHRE) PALETTE
+   ======================================================== */
+html[data-palette="ochre"] {
+  --bg: #F8F1E7;
+  --surface: #FFFFFF;
+  --surface-2: #F2E8DC;
+  --line: #E3D5C5;
+  --fg: #2D231B;
+  --muted: #706155;
+  --heading: #40220F;
+  --accent: #8A4B22;
+  --on-accent: #FFFFFF;
+  --highlight: #2F5D50;
+  --draft-bg: #F0E5D7;
+  --draft-fg: #733C14;
+  --danger: #B91C1C;
+  --ok: #15803D;
+}
+
+html.dark[data-palette="ochre"] {
+  --bg: #17110C;
+  --surface: #211B15;
+  --surface-2: #2C241D;
+  --line: #3D332A;
+  --fg: #ECE4DE;
+  --muted: #A6968B;
+  --heading: #FAF5F1;
+  --accent: #E2A574;
+  --on-accent: #17110C;
+  --highlight: #8FC1AE;
+  --draft-bg: #312316;
+  --draft-fg: #E8B688;
+  --danger: #F87171;
+  --ok: #4ADE80;
+}
+
+/* ========================================================
+   NIGHT (NIGHT SAFARI) PALETTE
+   ======================================================== */
+html[data-palette="night"] {
+  --bg: #F2F0EC;
+  --surface: #FFFFFF;
+  --surface-2: #EAE7E2;
+  --line: #DAD6D0;
+  --fg: #242422;
+  --muted: #696963;
+  --heading: #141513;
+  --accent: #1E1F1C;
+  --on-accent: #FFFFFF;
+  --highlight: #A27B3C;
+  --draft-bg: #ECE7DC;
+  --draft-fg: #735626;
+  --danger: #B91C1C;
+  --ok: #15803D;
+}
+
+html.dark[data-palette="night"] {
+  --bg: #0B0C0B;
+  --surface: #141514;
+  --surface-2: #1B1D1B;
+  --line: #2C2E2C;
+  --fg: #E5E6E5;
+  --muted: #969996;
+  --heading: #F5F6F5;
+  --accent: #E6D3A8;
+  --on-accent: #0B0C0B;
+  --highlight: #C79A4F;
+  --draft-bg: #282319;
+  --draft-fg: #DFC592;
+  --danger: #F87171;
+  --ok: #4ADE80;
+}
+
+/* ========================================================
+   SAGE (SAGE & STONE) PALETTE
+   ======================================================== */
+html[data-palette="sage"] {
+  --bg: #F3F4EF;
+  --surface: #FFFFFF;
+  --surface-2: #EBEDE5;
+  --line: #D9DDD2;
+  --fg: #222723;
+  --muted: #656E66;
+  --heading: #18291C;
+  --accent: #4B6650;
+  --on-accent: #FFFFFF;
+  --highlight: #8C6A4A;
+  --draft-bg: #E9EDE6;
+  --draft-fg: #364E3A;
+  --danger: #B91C1C;
+  --ok: #15803D;
+}
+
+html.dark[data-palette="sage"] {
+  --bg: #111612;
+  --surface: #18201A;
+  --surface-2: #202B23;
+  --line: #2C3A30;
+  --fg: #E3E8E4;
+  --muted: #96A498;
+  --heading: #F2F6F3;
+  --accent: #B8CDB9;
+  --on-accent: #111612;
+  --highlight: #D0A57E;
+  --draft-bg: #1D2620;
+  --draft-fg: #CADCCB;
+  --danger: #F87171;
+  --ok: #4ADE80;
+}
+
+/* Global Reset & Transitions */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--fg);
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-size: 1rem;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus outline */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Typography styles */
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+  color: var(--heading);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 7.2rem);
+  line-height: 1.05;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(2.3rem, 5vw, 4.2rem);
+  line-height: 1.15;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+.label-caps {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-weight: 600;
+}
+
+.btn-luxury {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  min-height: 44px;
+  transition: all 0.25s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.btn-luxury:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Scrim utility for text over hero photos */
+.photo-scrim {
+  background: linear-gradient(
+    180deg,
+    rgba(14, 22, 19, 0.25) 0%,
+    rgba(14, 22, 19, 0.7) 65%,
+    rgba(14, 22, 19, 0.92) 100%
+  );
+  color: #F6F3EB;
+}
+
+.photo-overlay-ivory {
+  color: #F6F3EB;
+}
